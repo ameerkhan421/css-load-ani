@@ -1,0 +1,112 @@
+html, body {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+   margin: 0;
+}
+
+.grass, .sky, .road {
+    position: relative;
+}
+
+.sky {
+    height: 40%;
+    background: skyblue;
+}
+
+.grass {
+    height: 30%;
+    background: green;
+}
+.road {
+    height: 30%;
+    background:dimgray; 
+    box-sizing: border-box;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+    width: 100%;
+}
+.lines {
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+
+.mario {
+    position: absolute;
+    top: -40px;
+    height: 200px;
+    left: 0px;
+    animation-name: run;
+    animation-duration: 3s;
+    animation-fill-mode: both; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear ;
+}
+
+.luigi {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    animation-name: run;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear ;
+}
+
+.cloud {
+    position: absolute;
+}
+
+.cloud:nth-child(1){
+    width: 200px;
+    top: 50px;
+    opacity: 0.5;
+    animation: wind 70s linear infinite reverse;
+}
+.cloud:nth-child(2){
+    width: 500px;
+    top: 0px;
+    animation: wind 50s linear infinite reverse;
+}
+
+@keyframes run {
+     from{transform: translateX(-300px)}
+     to{transform: translateX(4040px)}
+}
+
+@keyframes wind {
+    from{left: -300px;}
+    to{left: 100%;}
+}
+
+/* .wrapper {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+} 
+
+/* img {
+    transform: rotateZ(-90deg) translateY(200px) scale(2); 
+} */
+
+/* .circle {
+    width: 100px;
+    padding: 50px 0;
+    line-height: 0;
+    margin: 60px auto;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 1s, transform 0.3s;
+}
+
+.circle:hover {
+    background: darkblue;
+    transform: rotate(360deg);
+} */ 
